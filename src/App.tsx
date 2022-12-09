@@ -1,29 +1,20 @@
-import React, { useState } from 'react';
-//import { ComponentName } from 'primereact/{componentname}';
-import { Dialog } from 'primereact/dialog';
-import { Button } from 'primereact/button';
+import React, { FC, lazy, Suspense } from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
+import Spinner from './components/ui/Spinner';
 
-const App = () => {
-  const [dialogIsOpened, setDialogIsOpened] = useState<boolean | undefined>(
-    false,
-  );
+const Home = React.lazy(() => import('./pages/Home/Home'));
+const About = React.lazy(() => import('./pages/About/About'));
+const NotFound = React.lazy(() => import('./pages/NotFound/NotFound'));
 
+const App: FC = () => {
   return (
-    <div className="flex flex-col items-center justify-center w-full min-h-screen bg-gray-600">
-      <h1 className="pl-3 mb-10 text-3xl text-cyan-200 font-bold ">
-        Vite + React + TypeScript + Tailwind + Primereact
-      </h1>
-      <Dialog
-        visible={dialogIsOpened}
-        onHide={() => setDialogIsOpened((prev) => !prev)}
-      >
-        Hello World!
-      </Dialog>
-      <Button
-        label="Start"
-        onClick={() => setDialogIsOpened((prev) => !prev)}
-      />
-    </div>
+    <Suspense fallback={<Spinner />}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Suspense>
   );
 };
 
