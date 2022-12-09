@@ -1,9 +1,12 @@
-import React from 'react';
+import { FC } from 'react';
+import Page from '../../layouts/Page';
 
-type Props = {};
-
-const About = (props: Props) => {
-  return <div>About</div>;
+const About: FC = () => {
+  return (
+    <Page>
+      <div className="text-white">About</div>
+    </Page>
+  );
 };
 
 export default About;

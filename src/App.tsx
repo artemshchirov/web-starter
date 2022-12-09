@@ -1,4 +1,4 @@
-import React, { FC, lazy, Suspense } from 'react';
+import React, { FC, Suspense } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import Spinner from './components/ui/Spinner';
 
