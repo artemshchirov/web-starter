@@ -1,10 +1,11 @@
-import React, { FC, Suspense } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
-import Spinner from './components/ui/Spinner';
+import { FC, lazy, Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Spinner from './components/Spinner';
 
-const Home = React.lazy(() => import('./pages/Home/Home'));
-const About = React.lazy(() => import('./pages/About/About'));
-const NotFound = React.lazy(() => import('./pages/NotFound/NotFound'));
+const Home = lazy(() => import('./pages/Home/Home'));
+const About = lazy(() => import('./pages/About/About'));
+const NotFound = lazy(() => import('./pages/NotFound/NotFound'));
+const Contact = lazy(() => import('./pages/Contact/Contact'));
 
 const App: FC = () => {
   return (
@@ -12,6 +13,7 @@ const App: FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>

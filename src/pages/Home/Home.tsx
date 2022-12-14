@@ -1,29 +1,13 @@
-import { FC, useState } from 'react';
-
-import { Dialog } from 'primereact/dialog';
-import { Button } from 'primereact/button';
+import { FC } from 'react';
 
 import Page from '../../layouts/Page';
 
 const Home: FC = () => {
-  const [dialogIsOpened, setDialogIsOpened] = useState<boolean>(false);
   return (
     <Page>
-      <h1 className="mb-10 text-lg break-words text-cyan-200 md:text-3xl">
-        Vite + React + TypeScript + Tailwind + Primereact
+      <h1 className="self-center mb-10 text-xl font-semibold text-transparent whitespace-nowrap bg-clip-text bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100 md:text-3xl">
+        Vite + React.js + TypeScript + Tailwind CSS + Primereact
       </h1>
-
-      <Dialog
-        visible={dialogIsOpened}
-        onHide={() => setDialogIsOpened((prev) => !prev)}
-      >
-        Hello World!
-      </Dialog>
-
-      <Button
-        label="Start"
-        onClick={() => setDialogIsOpened((prev) => !prev)}
-      />
     </Page>
   );
 };
