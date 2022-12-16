@@ -25,7 +25,7 @@ const Header: FC = () => {
             alt="DevRel Hackathon Logo"
           />
           <span className="self-center text-xl font-semibold text-transparent whitespace-nowrap bg-clip-text bg-gradient-to-r dark:from-indigo-200 dark:via-red-200 dark:to-yellow-100">
-            New App Name
+            App Title
           </span>
         </CustomLink>
         <button
