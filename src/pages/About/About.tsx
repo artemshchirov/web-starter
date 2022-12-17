@@ -10,9 +10,9 @@ const About: FC = () => {
       <div className="mx-auto ">
         <CustomLink
           href="https://github.com/artemshchirov/web-starter"
-          className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100"
+          className="font-semibold text-transparent text-md md:text-3xl bg-clip-text bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100"
         >
-          About
+          <span className="underline">About</span>
         </CustomLink>
       </div>
     </Page>

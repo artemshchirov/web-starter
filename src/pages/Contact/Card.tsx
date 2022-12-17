@@ -51,7 +51,7 @@ const Card: FC<CardProps> = ({
             navigator.clipboard.writeText(email);
           }}
         >
-          <i className="pi pi-envelope w-5 h-5" />
+          <i className="w-5 h-5 pi pi-envelope" />
         </button>
         <Toast
           ref={toast}
@@ -61,17 +61,17 @@ const Card: FC<CardProps> = ({
 
         {linkedin ? (
           <CustomLink href={linkedin}>
-            <i className="pi pi-linkedin w-5 h-5" />
+            <i className="w-5 h-5 pi pi-linkedin" />
           </CustomLink>
         ) : null}
         {github ? (
           <CustomLink href={github}>
-            <i className="pi pi-github w-5 h-5" />
+            <i className="w-5 h-5 pi pi-github" />
           </CustomLink>
         ) : null}
         {link ? (
           <CustomLink href={link}>
-            <i className="pi pi-briefcase w-5 h-5" />
+            <i className="w-5 h-5 pi pi-briefcase" />
           </CustomLink>
         ) : null}
       </div>

@@ -1,8 +1,8 @@
-import photo_0 from '../assets/Artem.jpg';
+import photo_0 from '../assets/cat.png';
 
 export const team = [
   {
-    name: 'Artem Shchirov',
+    name: 'Artem',
     role: 'FullStack Developer, freelancer',
     image: photo_0,
     email: 'artemshchirov@gmail.com',
