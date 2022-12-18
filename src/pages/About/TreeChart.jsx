@@ -10,10 +10,10 @@ const TreeChart = () => {
       type: 'node-header',
       className: 'p-person',
       expanded: true,
-      data: { name: 'mono frontend backend' },
+      data: { name: 'mono SPA frontend backend' },
       children: [
         {
-          label: 'frontend /react page SPA',
+          label: '/react page',
           type: 'frontend',
           className: 'p-person',
           expanded: true,
@@ -43,19 +43,13 @@ const TreeChart = () => {
                 },
               ],
             },
-
             {
-              label: 'api',
-              className: 'frontend',
+              label: '/r-restapi',
+              type: 'frontend',
+              className: 'p-person',
               expanded: true,
+              data: { name: 'REST API' },
               children: [
-                {
-                  label: '/r-restapi',
-                  type: 'frontend',
-                  className: 'p-person',
-                  expanded: true,
-                  data: { name: 'REST API' },
-                },
                 {
                   label: '/r-graphql',
                   type: 'frontend',
@@ -67,7 +61,7 @@ const TreeChart = () => {
             },
 
             {
-              label: 'feat',
+              label: '/feat',
               className: 'frontend',
               expanded: 'true',
               children: [
@@ -76,21 +70,26 @@ const TreeChart = () => {
                   type: 'frontend',
                   className: 'p-person',
                   expanded: true,
-                  data: { name: 'toolkit' },
+                  data: { name: 'Toolkit' },
                 },
                 {
                   label: '/auth',
                   type: 'frontend',
                   className: 'p-person',
                   expanded: true,
-                  data: { name: 'formik' },
+                  data: { name: '+api' },
+                  children: [
+                    {
+                      label: 'Formik',
+                    },
+                  ],
                 },
               ],
             },
           ],
         },
         {
-          label: 'backend /nest auth role post',
+          label: '/nest auth role post',
           type: 'backend',
           className: 'p-person',
           expanded: true,
@@ -99,19 +98,14 @@ const TreeChart = () => {
           },
           children: [
             {
-              label: 'api',
-              className: 'backend',
+              label: '/n-restapi',
+              type: 'backend',
+              className: 'p-person',
               expanded: true,
+              data: {
+                name: 'REST API',
+              },
               children: [
-                {
-                  label: '/n-restapi',
-                  type: 'backend',
-                  className: 'p-person',
-                  expanded: true,
-                  data: {
-                    name: 'REST API',
-                  },
-                },
                 {
                   label: '/n-graphql',
                   type: 'backend',
@@ -123,6 +117,7 @@ const TreeChart = () => {
                 },
               ],
             },
+
             {
               label: 'typeorm',
               className: 'backend',
