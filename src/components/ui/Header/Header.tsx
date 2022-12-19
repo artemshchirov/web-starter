@@ -17,7 +17,7 @@ const Header: FC = () => {
         >
           <img src={logo} className="h-6 mr-3 sm:h-10" alt="App Logo" />
           <span className="self-center text-xl font-semibold text-black dark:text-white">
-            App Title
+            Web Starter
           </span>
         </CustomLink>
 
