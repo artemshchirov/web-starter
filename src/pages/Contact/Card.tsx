@@ -34,7 +34,7 @@ const Card: FC<CardProps> = ({
   };
 
   return (
-    <article className="flex flex-col justify-center w-full px-8 mx-2 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 dark:bg-gray-100 dark:text-gray-800">
+    <article className="flex flex-col justify-center w-full px-8 mx-2 my-12 text-center bg-gray-200 rounded-md md:w-96 2xl:w-52 dark:bg-gray-100 dark:text-gray-800">
       <img
         alt="Team member"
         className="self-center flex-shrink-0 object-cover w-24 h-24 -mt-12 bg-center bg-cover rounded-full dark:bg-gray-500"

@@ -4,15 +4,6 @@ import photo_2 from '../assets/bear.png';
 
 export const team = [
   {
-    name: 'Rabbit',
-    role: 'freelancer',
-    image: photo_0,
-    email: 'artemshchirov@gmail.com',
-    github: 'https://github.com/artemshchirov',
-    link: 'https://artemshchirov.github.io/portfolio/',
-    id: 0,
-  },
-  {
     name: 'Artem',
     role: 'FullStack Developer, freelancer',
     image: photo_1,
@@ -23,11 +14,12 @@ export const team = [
     id: 1,
   },
   {
-    name: 'Bear',
+    name: 'Rabbit',
     role: 'freelancer',
-    image: photo_2,
+    image: photo_0,
     email: 'artemshchirov@gmail.com',
-    linkedin: 'https://www.linkedin.com/in/artemshchirov/',
-    id: 2,
+    github: 'https://github.com/artemshchirov',
+    id: 0,
   },
+
 ];

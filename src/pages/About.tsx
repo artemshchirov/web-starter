@@ -1,13 +1,11 @@
 import { FC } from 'react';
 
-import Page from '../../layouts/Page';
-
-import TreeChart from './TreeChart';
+import Page from '../layouts/Page';
 
 const About: FC = () => {
   return (
     <Page>
-      <TreeChart />
+      
     </Page>
   );
 };

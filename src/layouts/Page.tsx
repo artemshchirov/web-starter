@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import Header from '../components/ui/Header';
+import Header from '../components/ui/Header/Header';
 import Footer from '../components/ui/Footer';
 
 interface PageProps {
@@ -9,9 +9,9 @@ interface PageProps {
 
 const Page: FC<PageProps> = ({ children }) => {
   return (
-    <div className="flex flex-col items-center justify-between min-h-screen p-3 bg-gradient-to-b from-gray-900 to-gray-600">
+    <div className="flex flex-col items-center justify-between min-h-screen p-3 bg-[conic-gradient(at_right,_var(--tw-gradient-stops))] from-indigo-200 via-slate-600 to-indigo-200">
       <Header />
-      <main className="flex flex-col items-center justify-center h-full w-max">
+      <main className="flex flex-col items-center justify-center w-full h-full px-16 py-8">
         {children}
       </main>
       <Footer />

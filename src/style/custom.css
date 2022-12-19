@@ -1,9 +1,10 @@
-/*******************
-* CUSTOM SCROLLBAR *
-********************/
+/******************
+* STYLE SCROLLBAR *
+*******************/
 :root {
-  --primary: rgb(107 114 128);
+  --primary: #1f2937;
   --secondary: white;
+  color: var(--secondary);
 }
 
 *::-webkit-scrollbar {
@@ -13,12 +14,10 @@
 
 *::-webkit-scrollbar-track {
   background: var(--primary);
-  border-radius: 5px;
 }
 
 *::-webkit-scrollbar-thumb {
   background-color: var(--secondary);
-  border-radius: 14px;
   border: 3px solid var(--primary);
 }
 
