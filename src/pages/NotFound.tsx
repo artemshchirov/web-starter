@@ -1,4 +1,5 @@
 import CustomLink from '../components/CustomLink'
+import ROUTE_PATHS from '../utils/routePaths'
 
 const NotFound = () => {
   return (
@@ -13,7 +14,7 @@ const NotFound = () => {
             But don`t worry, you can find plenty of other things on our homepage.
           </p>
           <CustomLink
-            href='/'
+            href={ROUTE_PATHS.HOME}
             className='px-8 py-3 font-semibold rounded dark:bg-violet-400 dark:text-gray-900'
           >
             Back to homepage
