@@ -31,7 +31,7 @@ const About: FC = () => {
             designs without leaving HTML.
           </li>
           <li>
-            <strong>PrimeReact:</strong> A rich UI component library to enhance and simplify React
+            <strong>DaisyUI:</strong> A rich UI component library to enhance and simplify React
             applications.
           </li>
           <li>

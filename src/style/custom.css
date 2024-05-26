@@ -3,7 +3,7 @@
 *******************/
 :root {
   --primary: #1f2937;
-  --secondary: white;
+  --secondary: whitesmoke;
   color: var(--secondary);
 }
 
