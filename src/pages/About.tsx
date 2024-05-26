@@ -10,10 +10,10 @@ const About: FC = () => {
         <h1 className='max-w-max mx-auto text-4xl font-medium'>Web Starter</h1>
         <p className='text-xl py-4 max-w-[650px] text-center mx-auto'>
           This template starter kit is equipped with a robust set of technologies designed for
-          building modern web applications efficiently.
+          building modern web applications <strong>fast</strong> and <strong>efficiently</strong>.
         </p>
         <p className='text-lg pb-2'>Here’s what’s included:</p>
-        <ul className='list-disc pl-5 space-y-2'>
+        <ul className='list-disc pl-5 space-y-2 text-md'>
           <li>
             <strong>Vite:</strong> A modern build tool that significantly improves the frontend
             development experience.
