@@ -35,6 +35,9 @@ const About: FC = () => {
             applications.
           </li>
           <li>
+            <strong>Axios:</strong> A promise-based HTTP client for the browser and Node.js.
+          </li>
+          <li>
             <strong>ESLint:</strong> The pluggable linting utility for JavaScript and JSX,
             configured with Airbnb's base rules to ensure code quality.
           </li>
