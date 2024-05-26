@@ -1,14 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router } from 'react-router-dom'
-import App from './App'
 
+import App from './App'
 import './style/index.css'
 import './style/custom.css'
-
-import 'primereact/resources/themes/saga-blue/theme.css'
-import 'primereact/resources/primereact.min.css'
-import 'primeicons/primeicons.css'
 
 const rootElement = document.getElementById('root') as HTMLElement
 ReactDOM.createRoot(rootElement).render(
