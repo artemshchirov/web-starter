@@ -1,11 +1,11 @@
-import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import React from 'react'
+import { Link, NavLink } from 'react-router-dom'
 
 interface CustomLinkProps {
-  href: string;
-  children: React.ReactNode;
-  className?: string;
-  activeClassName?: string;
+  href: string
+  children: React.ReactNode
+  className?: string
+  activeClassName?: string
 }
 
 const CustomLink = ({
@@ -17,11 +17,11 @@ const CustomLink = ({
   if (href.startsWith('http')) {
     return (
       <>
-        <a href={href} className={className} target="_blank" rel="noreferrer">
+        <a href={href} className={className} target='_blank' rel='noreferrer'>
           {children}
         </a>
       </>
-    );
+    )
   }
 
   if (href.startsWith('#')) {
@@ -31,7 +31,7 @@ const CustomLink = ({
           {children}
         </a>
       </>
-    );
+    )
   }
 
   if (activeClassName) {
@@ -39,14 +39,12 @@ const CustomLink = ({
       <>
         <NavLink
           to={href}
-          className={({ isActive }) =>
-            `${className} ${isActive ? activeClassName : ''}`
-          }
+          className={({ isActive }) => `${className} ${isActive ? activeClassName : ''}`}
         >
           {children}
         </NavLink>
       </>
-    );
+    )
   }
 
   return (
@@ -55,7 +53,7 @@ const CustomLink = ({
         {children}
       </Link>
     </>
-  );
-};
+  )
+}
 
-export default CustomLink;
+export default CustomLink

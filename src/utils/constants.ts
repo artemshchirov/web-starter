@@ -1,25 +1,25 @@
-import photo_0 from '../assets/rabbit.png';
-import photo_1 from '../assets/cat.png';
-import photo_2 from '../assets/bear.png';
+// import photo_0 from '../assets/rabbit.png'
+import photo_1 from '../assets/cat.png'
 
-export const team = [
+const team = [
   {
-    name: 'Artem',
-    role: 'FullStack Developer, freelancer',
+    name: 'Artem Shchirov',
+    role: 'Full Stack Developer',
     image: photo_1,
     email: 'artemshchirov@gmail.com',
     linkedin: 'https://www.linkedin.com/in/artemshchirov/',
     github: 'https://github.com/artemshchirov',
     link: 'https://artemshchirov.github.io/portfolio/',
-    id: 1,
+    id: 2,
   },
-  {
-    name: 'Rabbit',
-    role: 'freelancer',
-    image: photo_0,
-    email: 'artemshchirov@gmail.com',
-    github: 'https://github.com/artemshchirov',
-    id: 0,
-  },
+  // {
+  //   name: 'Rabbit',
+  //   role: 'freelancer',
+  //   image: photo_0,
+  //   email: 'artemshchirov@gmail.com',
+  //   github: 'https://github.com/artemshchirov',
+  //   id: 1,
+  // },
+]
 
-];
+export default team
