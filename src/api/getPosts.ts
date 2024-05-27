@@ -3,7 +3,7 @@ import { client, ResponseAPI } from './client'
 
 const getPosts = async (): Promise<ResponseAPI[]> => {
   try {
-    const { data } = await client.get('?_limit=6')
+    const { data } = await client.get('?_limit=2')
 
     return data
   } catch (error) {

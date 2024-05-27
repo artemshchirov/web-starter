@@ -27,8 +27,8 @@ const GetPost = () => {
   }
 
   return (
-    <>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4'>
+    <span className='border border-gray-500'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-2 p-4'>
         {posts.map(post => (
           <div
             key={post.id}
@@ -49,7 +49,7 @@ const GetPost = () => {
           </div>
         ))}
       </div>
-    </>
+    </span>
   )
 }
 

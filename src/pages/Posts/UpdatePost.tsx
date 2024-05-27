@@ -1,16 +1,37 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ResponseAPI } from '../../api/client'
-import createPost from '../../api/createPost'
+import getPosts from '../../api/getPosts'
+import updatePost from '../../api/updatePost'
 
-const CreatePost = () => {
+const UpdatePost = () => {
   const [posts, setPosts] = useState<ResponseAPI[]>([])
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
 
-  const handleClick = async () => {
+  useEffect(() => {
+    async function fetchPosts() {
+      setIsLoading(true)
+      try {
+        const result = await getPosts()
+        setPosts(result)
+      } catch (error) {
+        console.error(error)
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    fetchPosts()
+  }, [])
+
+  const handleUpdate = async (id: number) => {
+    const body = `Body updated`
+    const title = `Title updated`
+    const userId = Date.now()
+
     setIsLoading(true)
     try {
-      const newPost = await createPost('Post', 'Something about post', Date.now())
-      setPosts(prev => [newPost, ...prev])
+      const postUpdated = await updatePost({ id, body, title, userId })
+      setPosts(prev => [postUpdated, ...prev.filter(post => post.id !== id)])
     } catch (error) {
       console.error(error)
     } finally {
@@ -18,15 +39,17 @@ const CreatePost = () => {
     }
   }
 
+  if (isLoading) {
+    console.log('Loading...')
+  }
+
   return (
     <span className='border border-gray-500'>
-      <button className='btn btn-primary mt-4 ml-4' onClick={handleClick} disabled={isLoading}>
-        Add Post
-      </button>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-2 p-4'>
         {posts.map(post => (
           <div
             key={post.id}
+            onClick={() => handleUpdate(post.id)}
             className='bg-[#2f2f2f] rounded-lg shadow-md p-4 hover:bg-white/10 transition-colors duration-200'
           >
             <h2 className='text-md font-semibold mb-1'>
@@ -48,4 +71,4 @@ const CreatePost = () => {
   )
 }
 
-export default CreatePost
+export default UpdatePost
